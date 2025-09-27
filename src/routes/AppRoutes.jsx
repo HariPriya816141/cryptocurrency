@@ -22,10 +22,10 @@ const AppRoutes = () => {
     <Suspense fallback={<h6>Loading...</h6>}>
       <Routes>
       {/* public routes that everyone can access */}
-      <Route path='/home' element={<Home/>} />
+      <Route path='/' element={<Home/>} />
       <Route path='/about' element={<About/>} />
       <Route path='/contact' element={<Contact/>} />
-      <Route path='/' element={<PublicRoutes><Login/></PublicRoutes>} />
+      <Route path='/login' element={<PublicRoutes><Login/></PublicRoutes>} />
       <Route path='/register' element={<PublicRoutes><Register/></PublicRoutes>} />
       <Route path='/forgot-password' element={<PublicRoutes><ForgotPassword/></PublicRoutes>} />
 
