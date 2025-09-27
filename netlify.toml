@@ -1,0 +1,7 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[build.environment]
+  # Whitelist safe keys to avoid Netlify secrets scan errors
+  SECRETS_SCAN_OMIT_KEYS = "VITE_FIREBASE_API_KEY,VITE_FIREBASE_APP_ID,VITE_FIREBASE_AUTH_DOMAIN"
