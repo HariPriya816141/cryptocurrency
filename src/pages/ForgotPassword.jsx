@@ -15,7 +15,7 @@ const ForgotPassword = () => {
     setError(null);
     setMessage(null);
     try {
-      const res = await resetPassword(email);
+      const res = await resetPassword({email});
       if (res.error) throw new Error(res.error.message);
       setMessage("Password reset email sent successfully.");
       form.resetFields(); // Clear form after success

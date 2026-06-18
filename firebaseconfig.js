@@ -1,3 +1,4 @@
+//firebaseconfig.js
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 //enabling authentication service to app

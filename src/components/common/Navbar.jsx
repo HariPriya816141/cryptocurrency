@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
+  const navigate = useNavigate()
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm mb-5">
   <div className="container-fluid">
@@ -23,7 +24,7 @@ const Navbar = () => {
      </ul>
      </div>
      <div className="d-flex px-2">
-       <button className='btn btn-primary'>Login</button>
+       <button className='btn btn-primary' onClick={() => navigate("/login")}>Login</button>
      </div>
  
     

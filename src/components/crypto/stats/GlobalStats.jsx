@@ -11,9 +11,11 @@ const GlobalStats = () => {
     totalCoins,
     totalExchanges,
     totalMarketCap,
-    totalMarkets,
+    // totalMarkets,
     total24hVolume,
   } = globalStats;
+
+if (isError) return <h6>Error</h6>
 
   return (
     <div className="container">

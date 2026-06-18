@@ -59,6 +59,7 @@ const LineCharts = ({ data }) => {
       legend: {
         display: false,
       },
+    },
       scales: {
         x: {
           display: false,
@@ -66,7 +67,6 @@ const LineCharts = ({ data }) => {
         y: {
           display: false,
         },
-      },
     },
   };
 

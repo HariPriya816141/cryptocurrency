@@ -8,7 +8,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import { curveCardinal, symbol } from "d3-shape";
+import { curveCardinal } from "d3-shape";
 const cardinal = curveCardinal.tension(0.2);
 import UseCryptoHistory from "../hooks/UseCryptoHistory";
 
@@ -21,7 +21,7 @@ const AreaGraph = ({ coins }) => {
     return <h6>Loading...</h6>;
   }
   if (isError) {
-    <h6>Error...</h6>;
+    return <h6>Error...</h6>;
   }
   let graphdata = history.map((point) => ({
     

@@ -8,7 +8,7 @@ const PrivateRoutes = ({ children }) => {
   const { user, loading } = useSelector((state) => state.auth);
   if (loading) {
     return (
-      <spin size="large" style={{ display: "block", margin: "20% auto" }} />
+      <Spin size="large" style={{ display: "block", margin: "20% auto" }} />
     );
   }
 

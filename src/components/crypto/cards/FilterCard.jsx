@@ -12,20 +12,6 @@ const FilterCard = () => {
   //selecting the default timeperiod
   let [timePeriod, setTimePeriod] = useState("1y");
 
-  //filtering the coins to display from obtained data
-  let filteredCoins = coins.filter((ele) =>
-    ["BTC", "ETH", "XRP", "USDT", "BNB"].includes(ele.symbol)
-  );
-  console.log("fc", filteredCoins);
-
-  if (isLoading) {
-    <h6>Loading...</h6>;
-  }
-
-  if (isError) {
-    <h6>Error...</h6>;
-  }
-
   //keeping the active tab when users select a coin
   const [selectedTab, setSelectedTab] = useState("");
   console.log("st", selectedTab);
@@ -40,6 +26,22 @@ const FilterCard = () => {
       setSelectedTab(coins[0].uuid);
     }
   }, [coins]);
+
+  //filtering the coins to display from obtained data
+  let filteredCoins = coins.filter((ele) =>
+    ["BTC", "ETH", "XRP", "USDT", "BNB"].includes(ele.symbol)
+  );
+  console.log("fc", filteredCoins);
+
+  if (isLoading) {
+    return <h6>Loading...</h6>;
+  }
+
+  if (isError) {
+    return <h6>Error...</h6>;
+  }
+
+  
 
   //function to handle the timePeriod and selected tabs
   let handleTabKey = (key) => setSelectedTab(key);
